@@ -46,7 +46,7 @@ return inventory;
 function displayMenu() {
     window.console.log('');
     window.console.log('INVENTORY MANAGMENT MENU');
-    window.console.log('show - shoe inventory');
+    window.console.log('show - show inventory');
     window.console.log('');
 }
 

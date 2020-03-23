@@ -17,16 +17,29 @@ let movies1 = ["Dead Man", "Gladiator", "Hunger", "8 1/2", "Anna Karenina"];
 movies = movies1.shift();
 window.document.write(movies1); 
 console.log(movies1);
-//STEP 5
+//STEP 5 - a for loop 
+// let name;
+// let names = ["Ted Lewis", "Sue Jones", "Ray Thomas"];
+// for (name in names) {
+// window.document.write(names[name]);}
+
  movies = ["Nostalgia", "The mirror", "Andrei Rublev", "Persona", "Taxi Driver", "The Irishman"];
 for (var i = 0; i < movies.length; i++){
     window.console.log(movies[i]);
 }
-//STEP 6
+//STEP 6 -a for-in loop 
+// let i;
+// let nums = [1, 2, 3];
+// for (i in nums) {
+// window.document.write(nums[i]);}
 movies = ["Nostalgia", "The mirror", "Andrei Rublev", "Persona", "Taxi Driver", "The Irishman"];
-for (var i = 0; i < movies.length; i++){
-    window.console.log(movies[i]);
+let movie;
+for (movie in movies) {
+    window.console.log(movies[movie]);
 }
+// for (var i = 0; i < movies.length; i++){
+//     window.console.log(movies[i]);
+// }
 
 //STEP 7
 movies = ["Nostalgia", "The mirror", "Andrei Rublev", "Persona", "Taxi Driver", "The Irishman"];
@@ -42,21 +55,34 @@ for (var i = 0; i < movies.length; i++){
     window.console.log(`Movies I regret watching: ${leastFavMovies[i]}`);
 }
 
-// add 'Movies I like:' befor each item in the movies array
-for(let i = 0; i < movies.length; i++) {
-    movies[i] = 'Movies I like: ' + movies[i];
-    console.log( movies[i] + '.');
-}
+// = add 'Movies I like:' befor each item in the movies array
+// for(let i = 0; i < movies.length; i++) {
+//     movies[i] = 'Movies I like: ' + movies[i];
+//     console.log( movies[i] + '.');
+// }
 console.log(movies);
 
-// add 'Movies I like:' befor each item in the movies array
+// add 'Movies ..:' befor each item in the movies array
 for(let i = 0; i < movies.length; i++) {
     movies[i] = 'Movies I regret watching: ' + movies[i];
     console.log( movies[i] + '.');
 }
 console.log(movies);
 
-//STEP 9
+//STEP 9  - concat & reverse
+movies = ["Dead Man", "Gladiator", "Hunger", "8 1/2", "Anna Karenina", "Taxi Driver", "The Irishman"];
+leastFavMovies = ['Movie 1','Movie 2','Movie 3'];
+var movies2 = movies.concat(leastFavMovies);
+window.document.write(movies2.reverse());
+window.console.log(movies2.reverse());
+//concat
+// let names = ["Zak", "Fred", "Sally"];
+// names = names.concat("Jessica", "Mike", "John");
+// window.document.write(names);
+//reverse
+let names = ["Zak", "Fred", "Sally", "Jessica", "John", "Mike"];
+window.document.write(names.reverse());
+window.console.log(names.reverse());
 
 //STEP 10
 
@@ -83,10 +109,11 @@ var employee2 = {
         console.log(employees[1].name);   
 //STEP 14
 for(let i = 0; i < employees.length; i++) {
-    employees[i] = employees[i];
+ //   employees[i] = employees[i];
     console.log( employees[i] + '.');
 }
 console.log(employees);
+console.log( employees[i].name);
 //STEP 15-Add (at the end of the array)a new item using PUSH 
 employees = movies.push("Iris");
 console.log(employees);
@@ -98,10 +125,10 @@ var employees = ['Zak', 'Jessica', 'Mark', 'Fred', 'Sally'];
 function showEmployee() {
     employees = employees.toUpperCase();
     for (var i = 0; i < employees.length; i++){
-        window.console.log(employees[i]);   
+ //       window.console.log(employees[i]);   
     }
 }
-window.console.log();
+window.console.log(employees[i]);
 
 
 //STEP 18
@@ -113,9 +140,9 @@ function filterValue() {
 var randomItem = [1,2,3,4,5,6,7,8,9,0];
 var randomAll = randomItem[Math.floor(Math.random()*randomItem.length)];
 for(var i = 0; i < randomAll.length; i++) {
-    console.log(randomAll);
+    console.log( randomAll);
 }
-console.log(randomAll);
+console.log('new number ',randomAll);
 //STEP 20
 var arrayNums = [1,2,3];
 var max = arrayNums.reduce(function(a, b) {
@@ -128,3 +155,11 @@ console.log(Math.max(1, 3, 2));
 //bigger number
 const array1 = [15, -3, 22];
 console.log(Math.max(...array1));
+
+//largest number
+let numbers = [1, 4, 9, 16];
+let isLargeNumber = function(element) {
+return element > 13;
+};
+console.log(numbers.findIndex(isLargeNumber));
+window.document.write(numbers.findIndex(isLargeNumber));
