@@ -73,17 +73,23 @@ var employee1 = {
 };
 var employee2 = {
     name: "Ann",
-    legs: 4,
-    color: "orange",
+    title: 4,
+    department: "orange",
     working: false
 };
-        console.log(employee1.name); // dote notation access to the object values
-        console.log(employee2["name"]); // bracket notation
+        //console.log(employee1.name); // dote notation access to the object values
+       // console.log(employee2["name"]); // bracket notation
         var employees = [employee1, employee2];
         console.log(employees[1].name);   
 //STEP 14
-
-//STEP 15
+for(let i = 0; i < employees.length; i++) {
+    employees[i] = employees[i];
+    console.log( employees[i] + '.');
+}
+console.log(employees);
+//STEP 15-Add (at the end of the array)a new item using PUSH 
+employees = movies.push("Iris");
+console.log(employees);
 
 //STEP 16
 
@@ -103,6 +109,22 @@ function filterValue() {
     window.console.log(filterValues([58, '', 'abcd', true, null, false, 0]));
 }
 
-//STEP 19
-
+//STEP 19 -Write a JavaScript function to get a random item from an array. So if I create a numeric array with 10 numbers and then pass that array into my function, the function should randomly return one of those numbers.
+var randomItem = [1,2,3,4,5,6,7,8,9,0];
+var randomAll = randomItem[Math.floor(Math.random()*randomItem.length)];
+for(var i = 0; i < randomAll.length; i++) {
+    console.log(randomAll);
+}
+console.log(randomAll);
 //STEP 20
+var arrayNums = [1,2,3];
+var max = arrayNums.reduce(function(a, b) {
+    return Math.max(a, b);
+});
+
+//bigger number
+console.log(Math.max(1, 3, 2));
+
+//bigger number
+const array1 = [15, -3, 22];
+console.log(Math.max(...array1));
