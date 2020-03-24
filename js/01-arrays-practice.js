@@ -151,7 +151,7 @@ window.console.log(movNam);
 //STEP 17
 employees = ['Zak', 'Jessica', 'Mark', 'Fred', 'Sally']; 
 console.log('Employees:\t');
-console.log(employees[i].toUpperCase());
+//console.log(employees[i].toUpperCase());
 function showEmployee() {
     
     for (var i = 0; i < employees.length; i++) {
@@ -190,8 +190,8 @@ var max = arrayNums.reduce(function(a, b) {
 //bigger number
 console.log(Math.max(1, 5, 2));
 
-//bigger number
+//max number/min
 const array1 = [15, -3, 22];
 console.log(Math.max(...array1));
-
+console.log(Math.min(...array1));
 
