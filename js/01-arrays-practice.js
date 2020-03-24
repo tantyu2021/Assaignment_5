@@ -130,14 +130,14 @@ var employee2 = {
 
 //STEP 14
 for(let i = 0; i < employees.length; i++) {
- //   employees[i] = employees[i];
-    console.log( employees[i] + '.');
+    console.log( employees[i].name + '.');
 }
 console.log(employees);
-//console.log( employees[i].name);
+
 
 //STEP 15-Add (at the end of the array)a new item using PUSH 
-employees = movies.push("Iris");
+employees = [employee1, employee2];
+employees = employees.push("Iris");
 console.log(employees);
 
 //STEP 16 -Create a multi-dimensional array; iterate/loop through the array and filter out : filter() method
@@ -149,16 +149,16 @@ window.console.log(movNam);
 
 
 //STEP 17
-var employees = ['Zak', 'Jessica', 'Mark', 'Fred', 'Sally']; 
+employees = ['Zak', 'Jessica', 'Mark', 'Fred', 'Sally']; 
 console.log('Employees:\t');
+console.log(employees[i].toUpperCase());
 function showEmployee() {
-    employees = employees.toUpperCase();
-    for (var i = 0; i < employees.length; i++){
- //       window.console.log(employees[i]);   
+    
+    for (var i = 0; i < employees.length; i++) {
+        console.log(employees[i].toUpperCase()); 
     }
-    window.console.log(employees[i] + '<br>');
 }
-window.console.log(employees[i]);
+showEmployee();
 
 
 //STEP 18 -filter() method
